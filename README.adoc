@@ -1,0 +1,28 @@
+= README: moern_shell
+
+== Goals
+
+. Get a easy access to the linux shell in a modern way.
+. Stop using the old shell abbreviations and use the full command names.
+. This will help you to remember the commands and to understand what they do.
+
+== Installation
+
+[source,shell]
+----
+pip install modern-shell
+----
+
+== Groups
+
+. File
+. Directory (folder)
+
+== Development
+
+=== Run tests
+
+[source,shell] 
+----
+pytest
+----
