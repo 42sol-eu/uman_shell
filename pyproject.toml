@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "modern-shell"
-version = "2024.0.14"
+version = '2024.0.16'
 description = ""
 authors = ["andreas felix haeberle <felix.haeberle@icloud.com>"]
 readme = "README.md"
@@ -18,7 +18,7 @@ behave = "^1.2.6"
 black = "^24.4.2"
 
 [tool.poetry-version-plugin]
-source = "git-tag"
+source = "init"
 
 [build-system]
 requires = ["poetry-core"]
