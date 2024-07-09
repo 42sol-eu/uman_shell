@@ -103,8 +103,23 @@ def test_file_show(from_file):
     file_append(file_name, additional_content)
 
     file_output = file_show(file_name)
-    print('#'  * 20)
-    print(file_output)
-    print('#'  * 20)
-    print(content + additional_content)
     assert(file_output == content + additional_content)
+
+    file_remove(file_name)
+    content = 'first line!\nsecond line\nthird line'
+    file_create(file_name, content)
+    file_output = file_show(file_name,insert_line_numbers=True)
+    print(content)
+    print(file_output)
+    numbered_output = ''
+    for line in enumerate(content.split('\n')):
+        numbered_output += f'{line[0]+1:3}: {line[1]}\n'
+    numbered_output = numbered_output[:-1]
+    print(20*'=')
+    print(numbered_output)
+    print(20*'=')
+    print(file_output)
+    print(20*'=')
+    assert(numbered_output == file_output)
+        
+
