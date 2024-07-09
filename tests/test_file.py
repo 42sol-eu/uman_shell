@@ -89,12 +89,22 @@ def test_file_append(from_file):
     assert(2*content == file_content)
     file_remove(file_name)
 
-def test_file_show(file_from):
+def test_file_show(from_file):
     """
     Test file show.
     """
     content = 'Hello, World!'
     file_name = 'file_f.txt'
     file_create(file_name, content)
-    file_show(file_name)
-    file_remove(file_name)
+    file_output = file_show(file_name)
+    assert(file_output == content)
+
+    additional_content = '\nmore_content\nin multiple lines.'
+    file_append(file_name, additional_content)
+
+    file_output = file_show(file_name)
+    print('#'  * 20)
+    print(file_output)
+    print('#'  * 20)
+    print(content + additional_content)
+    assert(file_output == content + additional_content)

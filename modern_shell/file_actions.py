@@ -103,11 +103,19 @@ def file_show(file_name, insert_line_numbers=False):
     Args:
         file_name (str): The name of the file to show.
     """
+    first_line = True 
     with open(file_name, 'r') as f:
-        content = f.read()
-    for i, line in enumerate(content.split('\n')):
+        bare_content = f.read()
+        output = ''
+    for i, line in enumerate(bare_content.split('\n')):
         if insert_line_numbers:
-            print(f'{i+1:3}: {line}')
+            next_line = f'{i+1:3}: {line}'
         else:
-            print(line) 
-    return content
+            next_line = line 
+        
+        print(next_line)
+        if not first_line:
+            output += '\n'
+            first_line = False
+        output += next_line
+    return output
