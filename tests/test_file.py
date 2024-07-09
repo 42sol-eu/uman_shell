@@ -1,4 +1,4 @@
-from modern_shell import file_exists, file_create, file_copy, file_remove, file_append
+from modern_shell import file_exists, file_create, file_copy, file_remove, file_append, file_show
 import pytest 
 
 def test_file_exists():
@@ -87,4 +87,14 @@ def test_file_append(from_file):
     file_append(file_name, content)
     file_content = open(file_name).read()
     assert(2*content == file_content)
+    file_remove(file_name)
+
+def test_file_show(file_from):
+    """
+    Test file show.
+    """
+    content = 'Hello, World!'
+    file_name = 'file_f.txt'
+    file_create(file_name, content)
+    file_show(file_name)
     file_remove(file_name)

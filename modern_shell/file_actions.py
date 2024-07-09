@@ -94,3 +94,20 @@ def file_append(file_name: str, add_content: str) -> bool:
     except Exception as e:
         console.print(f'[red]Error appending to file: {e}[/red]')
         return False
+    
+
+def file_show(file_name, insert_line_numbers=False):
+    """
+    (`cat`) Show the content of a file.
+
+    Args:
+        file_name (str): The name of the file to show.
+    """
+    with open(file_name, 'r') as f:
+        content = f.read()
+    for i, line in enumerate(content.split('\n')):
+        if insert_line_numbers:
+            print(f'{i+1:3}: {line}')
+        else:
+            print(line) 
+    return content
