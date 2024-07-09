@@ -114,8 +114,9 @@ def file_show(file_name, insert_line_numbers=False):
             next_line = line 
         
         print(next_line)
-        if not first_line:
-            output += '\n'
+        if first_line:
             first_line = False
+        else:
+            output += '\n'
         output += next_line
     return output
