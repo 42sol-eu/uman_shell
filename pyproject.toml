@@ -18,7 +18,7 @@ behave = "^1.2.6"
 black = "^24.4.2"
 
 [tool.poetry-version-plugin]
-source = "init"
+source = "git-tag"
 
 [build-system]
 requires = ["poetry-core"]
