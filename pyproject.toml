@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "modern-shell"
+version = "2024.0.14"
+description = ""
+authors = ["andreas felix haeberle <felix.haeberle@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rich = "^13.7.1"
+shellrunner = "^0.4.2"
+poetry-version-plugin = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+behave = "^1.2.6"
+black = "^24.4.2"
+
+[tool.poetry-version-plugin]
+source = "git-tag"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
