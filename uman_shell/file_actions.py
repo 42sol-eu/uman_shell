@@ -181,3 +181,4 @@ def file_show(file_name, insert_line_numbers=False):
 # TODO: check if is office file (word, exel, powerpoint, also apple?)
 # TODO: add anaysers (here or in seperate modules) like wc, grep, sed, awk, sort, uniq, cut, tr, head, tail, split, join, paste, diff, cmp, comm, tee, nl, od, strings, file, find, locate, which, whereis, type, time, date, cal, bc, seq, factor, expr
 # TODO: add tools `less`, `more`, 
+# TODO: think about an object orientated interface for File

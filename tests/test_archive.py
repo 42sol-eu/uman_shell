@@ -1,5 +1,5 @@
 import pytest
-from modern_shell import has_archive_extension, archive_exists #, archive_create
+from uman_shell import has_archive_extension, archive_exists #, archive_create
 
 def test_has_archive_extension():
     """

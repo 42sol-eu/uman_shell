@@ -1,6 +1,6 @@
 import pytest 
-from modern_shell import file_exists, file_create, file_copy, file_remove, file_append, file_show
-from modern_shell import directory_exists, directory_create, directory_remove
+from uman_shell import file_exists, file_create, file_copy, file_remove, file_append, file_show
+from uman_shell import directory_exists, directory_create, directory_remove
 # , directory_copy, directory_show
 
 
