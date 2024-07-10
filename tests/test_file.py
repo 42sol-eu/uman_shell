@@ -1,5 +1,5 @@
 import pytest 
-from modern_shell import file_exists, file_create, file_copy, file_remove, file_append, file_show
+from uman_shell import file_exists, file_create, file_copy, file_remove, file_append, file_show
 
 # TODO: add failure cases with directories here or in test_directory.py
 # TODO: add with path to file

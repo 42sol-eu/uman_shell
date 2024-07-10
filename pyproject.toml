@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "modern-shell"
+name = "uman-shell"
 version = '2024.0.16'
 description = ""
-authors = ["andreas felix haeberle <felix.haeberle@icloud.com>"]
+authors = ["andreas felix haeberle <felix@42sol.eu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
